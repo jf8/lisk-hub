@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { detect } from 'detect-browser';
 import { I18nextProvider } from 'react-i18next';
@@ -26,7 +26,7 @@ rootElement.setAttribute('class', browser.name);
 
 const renderWithRouter = Component =>
   <Provider store={store}>
-    <Router>
+    <Router basename={'/hub'}>
       <I18nextProvider i18n={ i18n }>
         <Component />
       </I18nextProvider>
