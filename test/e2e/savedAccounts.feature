@@ -45,3 +45,19 @@ Feature: Saved Accounts
     And I click "remove button"
     And I click "edit button"
     Then I should see 1 instances of "saved account card"
+
+  Scenario: should allow to save a second account, switch accounts, log in to last active account, and remove account
+    Given I'm logged in as "empty account"
+    When I click "saved accounts" in main menu
+    And I click "add lisk id card"
+    And I'm logged in as "genesis"
+    And I click "saved accounts" in main menu
+    Then I should see 2 instances of "saved account card"
+    When I click "add lisk id card"
+    And I'm logged in as "empty account"
+    When I click "saved accounts" in main menu
+    Then I should see 3 instances of "saved account card"
+    And I click "add lisk id card"
+    And I'm logged in as "genesis"
+    And I click "saved accounts" in main menu
+    Then I should see 3 instances of "saved account card"
