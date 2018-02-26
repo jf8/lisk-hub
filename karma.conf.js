@@ -121,7 +121,6 @@ module.exports = function (config) {
             'src/utils/ipcLocale.js',
             'app/src/menu.js',
             'app/src/modules/autoUpdater.js',
-            'app/src/modules/win.js',
             'app/src/modules/localeHandler.js',
             'src/components/votesPreview/index.js',
           ],
